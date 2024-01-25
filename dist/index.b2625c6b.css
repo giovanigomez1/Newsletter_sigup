@@ -1,0 +1,335 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --tomato: #ff6257;
+  --dark-slate-grey: #242742;
+  --charcoal-grey: #36384e;
+  --grey: #9294a0;
+  --white: #fff;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+@media only screen and (width <= 62.5em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+body {
+  background-color: var(--charcoal-grey);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  font-family: Roboto, sans-serif;
+  display: flex;
+  position: relative;
+}
+
+@media only screen and (width <= 37.5em) {
+  body {
+    justify-content: space-between;
+  }
+}
+
+.container {
+  justify-content: center;
+  align-items: center;
+  max-width: 130rem;
+  display: flex;
+}
+
+.container .signup {
+  background-color: var(--white);
+  border-radius: 15px;
+  grid-template-columns: 1fr 1fr;
+  width: 82%;
+  padding: 2rem;
+  display: grid;
+}
+
+@media only screen and (width <= 50em) {
+  .container .signup {
+    border-radius: 0;
+    grid-template-rows: 42rem 1fr;
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+}
+
+@media only screen and (width <= 37.5em) {
+  .container .signup {
+    width: 100%;
+  }
+}
+
+.container .signup__intro {
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+  padding: 6.4rem 4.5rem;
+  display: flex;
+}
+
+@media only screen and (width <= 50em) {
+  .container .signup__intro {
+    padding: 2rem 4.5rem 4.5rem;
+  }
+}
+
+@media only screen and (width <= 37.5em) {
+  .container .signup__intro {
+    padding: 0 4.5rem 10rem;
+  }
+}
+
+.container .signup__intro-info {
+  flex-direction: column;
+  gap: 3rem;
+  display: flex;
+}
+
+.container .signup__intro-info h1 {
+  font-size: 5.5rem;
+  font-weight: 700;
+}
+
+@media only screen and (width <= 37.5em) {
+  .container .signup__intro-info h1 {
+    font-size: 4.8rem;
+  }
+}
+
+.container .signup__intro-info p {
+  font-size: 1.6rem;
+}
+
+.container .signup__intro-info .features {
+  flex-direction: column;
+  gap: 2rem;
+  list-style: none;
+  display: flex;
+}
+
+.container .signup__intro-info .features__ele {
+  align-items: center;
+  gap: 1.4rem;
+  display: flex;
+}
+
+.container .signup__intro-form {
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  display: flex;
+}
+
+.container .signup__intro-form--input {
+  flex-direction: column;
+  gap: .6rem;
+  width: 100%;
+  display: flex;
+}
+
+.container .signup__intro-form--input-title {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+.container .signup__intro-form--input-title_name {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.container .signup__intro-form--input-title_err {
+  color: var(--tomato);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.container .signup__intro-form--input input {
+  border: 1px solid var(--grey);
+  cursor: pointer;
+  color: var(--dark-slate-grey);
+  border-radius: 10px;
+  padding: 1.6rem 1.5rem;
+}
+
+@media only screen and (width <= 37.5em) {
+  .container .signup__intro-form--input input {
+    padding: 2rem 1.5rem;
+  }
+}
+
+.container .signup__intro-form--input input:focus {
+  border: 1px solid var(--charcoal-grey);
+  outline: none;
+}
+
+.container .signup__intro-form button {
+  color: var(--white);
+  cursor: pointer;
+  background-image: linear-gradient(#36384e, #36384e);
+  border: none;
+  border-radius: 10px;
+  padding: 1.7rem 1.5rem;
+}
+
+@media only screen and (width <= 37.5em) {
+  .container .signup__intro-form button {
+    padding: 2.2rem 1.5rem;
+  }
+}
+
+.container .signup__intro-form button:hover {
+  background-image: linear-gradient(to right, #ff6257a4, #ff6257);
+}
+
+.container .signup__image {
+  background-image: url("illustration-sign-up-desktop.1e3b4b18.svg");
+  background-position: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  justify-self: end;
+  width: 100%;
+  display: block;
+}
+
+@media only screen and (width <= 50em) {
+  .container .signup__image {
+    background-image: url("illustration-sign-up-mobile.98e0918e.svg");
+    background-size: contain;
+    background-position: initial;
+    grid-row: 1;
+  }
+}
+
+.container .signup__success {
+  background-color: var(--charcoal-grey);
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.container .signup__success .success--container {
+  background-color: var(--white);
+  border-radius: 2.5rem;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 39rem;
+  padding: 3rem;
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media only screen and (width <= 37.5em) {
+  .container .signup__success .success--container {
+    border-radius: 0;
+    justify-content: center;
+    max-width: 100%;
+    height: 100vh;
+    padding-top: 20rem;
+    padding-bottom: 8rem;
+    top: 0;
+    left: 0;
+    transform: none;
+  }
+}
+
+.container .signup__success .success--container--title {
+  font-size: 4.5rem;
+}
+
+@media only screen and (width <= 37.5em) {
+  .container .signup__success .success--container--title {
+    font-size: 5rem;
+  }
+}
+
+.container .signup__success .success--container--msg {
+  font-size: 1.4rem;
+  line-height: 1.6;
+}
+
+.container .signup__success .success--container--msg span {
+  font-weight: 700;
+}
+
+@media only screen and (width <= 37.5em) {
+  .container .signup__success .success--container--msg {
+    font-size: 2.1rem;
+  }
+}
+
+.container .signup__success .success--container--btn {
+  color: var(--white);
+  cursor: pointer;
+  background-image: linear-gradient(#36384e, #36384e);
+  border: none;
+  border-radius: 10px;
+  padding: 1.7rem 1.5rem;
+}
+
+@media only screen and (width <= 37.5em) {
+  .container .signup__success .success--container--btn {
+    margin-top: auto;
+    padding: 2.8rem 1.5rem;
+    font-size: 2rem;
+  }
+}
+
+.container .signup__success .success--container--btn:hover {
+  background-image: linear-gradient(to right, #ff6257a4, #ff6257);
+}
+
+.hidden {
+  display: none;
+}
+
+.inputText::-webkit-input-placeholder {
+  color: var(--tomato);
+}
+
+.attribution {
+  background-color: var(--charcoal-grey);
+  color: var(--white);
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 3rem;
+  font-size: 1rem;
+  display: flex;
+  position: absolute;
+  top: calc(100vh - 3rem);
+}
+
+@media only screen and (width <= 50em) {
+  .attribution {
+    position: relative;
+    top: 0;
+  }
+}
+
+.attribution a:link, .attribution a:visited {
+  color: var(--white);
+  cursor: pointer;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=index.b2625c6b.css.map */
